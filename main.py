@@ -1,16 +1,18 @@
-# This is a sample Python script.
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    start_server = None
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    while start_server is None:
+        try:
+            start_server_input = input('Would you like to start a server? (Y/N)')
+        except Exception as e:
+            pass
+        else:
+            if start_server_input == 'Y':
+                start_server = True
+                print('Starting server')
+            elif start_server_input == 'N':
+                start_server = False
+                print('Joining game')
+            else:
+                print('Please enter a valid input')
